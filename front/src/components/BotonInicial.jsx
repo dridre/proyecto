@@ -5,7 +5,6 @@ function BotonInicial (){
 <button className="BotonInicial">
 Nuevo viaje
 </button>
-    );
-}
+)}
 
 export default BotonInicial;
