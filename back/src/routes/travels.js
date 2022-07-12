@@ -7,7 +7,7 @@ router.route("/")
     .get(getTravels)
     .post(createTravels);
 
-router.route("/:name")
-    .get(getTravel)
+router.route("/:id")
+    .get(getTravel);
 
 module.exports = router;
