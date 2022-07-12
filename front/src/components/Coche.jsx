@@ -1,9 +1,13 @@
 import "../styles/Coche.css"
 
-import React from 'react'
+
+import axios from "axios";
 
 export default function Coche() {
 
+    const res = await axios.put('/api/article/123', {
+        name: 'Making PUT Requests with Axios',
+    });
 
   return (
     <div>Coche</div>
