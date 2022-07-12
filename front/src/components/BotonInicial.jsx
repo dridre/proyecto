@@ -17,7 +17,7 @@ export default function BotonInicial() {
         return result;
     }
 
-    const name = makeid();
+   const name = makeid();
 
     const createWeb = async e => {
         await axios.post(URI, {
@@ -25,8 +25,6 @@ export default function BotonInicial() {
         })
         window.location.href = "/" + name
     };
-
-
 
 
 

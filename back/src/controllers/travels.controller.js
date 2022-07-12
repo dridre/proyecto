@@ -14,9 +14,18 @@ travelCtrl.createTravels = async (req, res) => {
 }
 
 travelCtrl.getTravel = async (req, res) => {
-    const travel = await Travel.findById(req.params.id);
+    const travel = await Travel.find({name: req.params.name});
     res.json(travel)
 }
+
+travelCtrl.updateTravel = async (req, res) => {
+    const {name, cars} = req.body;
+    await Travel.findOneAndUpdate({name: req.params.name}, {
+        name,
+        cars
+    });
+    res.json({message: "Nota actualizada"})
+    }
 
 
 module.exports = travelCtrl;
